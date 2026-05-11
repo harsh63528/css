@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+margin: auto;
+padding: 0.5rem;
+border-style: dotted;
+border-color: red;
+width: 50ch;
+}
+
+.topic{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.heading{
+    text-decoration:underline;
+    color: rgb(150, 163, 78);
+}
+.numbering{
+    font-weight: bolder;
+
+}
+
