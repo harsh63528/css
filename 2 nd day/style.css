@@ -1,0 +1,26 @@
+.container{
+    margin:auto;
+    height: 300px;
+    width: 300px;   
+    border-style:  double;
+    border-color: red;
+    border-radius: 50%;
+    box-shadow: 5px 5px black;
+}
+
+.circle{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(221, 17, 17);
+    border-radius: inherit;
+    
+}
+
+.minicircle{
+    margin: auto;
+    height: 20%;
+    width: 20%;
+    border-radius: 50%;
+    background-color: aqua;
+
+}
