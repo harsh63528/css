@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* navbar */
+
+header{
+    display: flex;
+    background-color: bisque;
+    justify-content: space-between;
+    margin: 5%;
+    padding: 0.5em;
+    border-style: solid;
+    border-radius: 1em;
+}
+header h2{
+    font-family: cursive;
+}
+
+nav{
+    display: flex;
+    height: 100%;
+    vertical-align: middle;
+    gap: 1em;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav a:hover{
+    color: rgba(0, 0, 0, 0.486);
+    text-decoration: underline;
+}
+
+nav a:visited{
+    color: red;
+}
+
+
+/* index.html */
+
+.aboutUs{
+    margin: auto;
+    padding: 1em;
+    width: 50ch;
+    text-align: justify;
+    border-style: double;
+    border-radius: 1em;
+}
+
+.aboutUs h2{
+    text-decoration: underline;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.aboutus p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* career.html */
+.jobCard{
+    margin: auto;
+    margin-bottom: 1em;
+    padding: 1em;
+    border-style: solid;
+    border-radius: 1em;
+
+}
+
+.jobTitle{
+    text-decoration: underline;
+    font-weight: bolder;
+    margin-bottom: 1em;
+    
+}
