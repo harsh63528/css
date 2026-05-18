@@ -7,17 +7,21 @@
 .container{
 
     margin-top: 1em;
-
 }
 
 header{
+    position: fixed;
+    display: flexbox;
+    align-content: center;
+    z-index: 1;
+    width: 100%;
+    top: 0;
     background-color: red;
     height: 2em;
 }
 
 header nav ul{
     display: flex;
-    height: fit-content;
     justify-content: space-evenly;
 }
 
@@ -38,4 +42,27 @@ header nav ul li a:hover{
     background-color: aqua;
     border-radius: 1em;
     padding: 0.3em;
+}
+
+
+main{
+    margin-top: 2em;
+}
+
+.column{
+    border-style: solid;
+    margin-top: 1em;
+    background-color: brown;
+    column-count: 5;
+    column-width: 250px;
+    column-rule: 1px solid black;
+    gap: 2em;
+}
+
+footer{
+    background-color: blueviolet;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
