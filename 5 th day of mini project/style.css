@@ -1,0 +1,79 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* body section */
+body{
+    font-family: cursive;
+    background-image: linear-gradient(blue,red,green);
+    gap: 1rem;
+}
+
+
+/* header section start */
+header{
+    background-color: black;
+    position: fixed;
+    top:0;
+    width: 100%;
+
+}
+
+nav{
+    
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+ul li a{
+    color: whitesmoke;
+    text-decoration: none;
+
+}
+
+main{
+    margin-top: 2rem;
+    margin-bottom:2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.card{
+  height: 300px;
+  width: 300px;
+  background-color: white;
+  border-style: solid;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+figure img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    background-color: blueviolet;
+    width: 100%;
+    text-align: center;
+}
