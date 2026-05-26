@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: red;
+    height:100%;
+}
+
+header{
+    background-color: green;
+}
+
+header nav{
+    background-color:blue;
+}
+
+header button{
+    background-color: bisque;
+}
+
+aside{
+    background-color: aqua;
+}
+
+aside nav{
+    background-color: blueviolet;
+}
+
+.slider{
+    background-color: brown;
+    min-height: 200px;
+    min-width: 100%;
+}
+
+.info{
+    background-color: aqua;
+}
+
+.projects{
+    background-color: beige;
+    min-height: 150px;
+}
+
+.project{
+    background-color: white;
+    min-height: 10px;
+}
+
+.project .img{
+    background-color: gray;
+    min-width: 500px;
+}
