@@ -30,9 +30,10 @@ function ranSum(num){
     let str=num.toString()
     return function(){
         const value=str.split("")
-        for(let i=0;i<= value.length;i++){
-            console.log(`running ${i}`)
+        for(let i=0;i< value.length;i++){            //there was issue that value.length is 5 but the index no is from 0 to 4 
+            console.log(`running ${value.length}`);
             result+=Number(value[i])
+            console.log(result)
         }
          return result
     }
@@ -40,3 +41,30 @@ function ranSum(num){
 
 const value1=ranSum(63528)
 console.log(value1())
+
+// palindrome number
+
+// function palidrom(num){
+//      let value=num.toString()
+//      let palidrom=false;
+//     return function(){
+//        let valuearr=value.split("")
+//        let reverseValue=[...valuearr].reverse()
+//        for(let i=0;i<valuearr.length;i++){
+//         if(Number(valuearr[i]) === Number(reverseValue[i])){
+//             palidrom=true;
+//         }
+//         else{
+//             palidrom=false;
+//         }
+//        }
+
+//        return palidrom
+//     }
+// }
+
+// const v1=palidrom(666)
+// const v2=palidrom(5626589)
+
+// console.log(`v1 ${v1()}`)
+// console.log(`v2 ${v2()}`)
