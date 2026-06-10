@@ -25,22 +25,22 @@
 
 // sum of digit of number for eg 635284
 
-function ranSum(num){
-    let result=0;
-    let str=num.toString()
-    return function(){
-        const value=str.split("")
-        for(let i=0;i< value.length;i++){            //there was issue that value.length is 5 but the index no is from 0 to 4 
-            console.log(`running ${value.length}`);
-            result+=Number(value[i])
-            console.log(result)
-        }
-         return result
-    }
-}
+// function ranSum(num){
+//     let result=0;
+//     let str=num.toString()
+//     return function(){
+//         const value=str.split("")
+//         for(let i=0;i< value.length;i++){            //there was issue that value.length is 5 but the index no is from 0 to 4 
+//             console.log(`running ${value.length}`);
+//             result+=Number(value[i])
+//             console.log(result)
+//         }
+//          return result
+//     }
+// }
 
-const value1=ranSum(63528)
-console.log(value1())
+// const value1=ranSum(63528)
+// console.log(value1())
 
 // palindrome number
 
@@ -68,3 +68,54 @@ console.log(value1())
 
 // console.log(`v1 ${v1()}`)
 // console.log(`v2 ${v2()}`)
+
+
+// fibuonacci number
+
+function fibu(num){
+    return function(){
+        let init=0;
+        let curr=1;
+        let next;
+        const arr=[];
+
+        
+            for(let i=0;i<= num;i++){
+                next=init+curr;
+                init=curr;
+                curr=next;
+                arr.push(next)
+            }
+            arr.reverse;
+            return arr
+    }
+}
+
+let v1=fibu(10)
+console.log(v1())
+
+// find missing value
+
+// function missing(arr){
+//     return function(){
+//         let arrSum=0;
+//         let expected=0;
+//         for(let i=0;i<arr.length;i++){
+//             console.log(arr[i])
+//             arrSum+=arr[i];
+//         }
+
+//         for(let i=1;i<=arr.length;i++){
+//             console.log(`expected ${i}`)
+//             expected+=i
+//         }
+
+//         let output=expected-arrSum;
+//         console.log(output)
+//         console.log(arr)
+//         return output
+//     }
+// }
+
+// let v1=missing([1,0,3,4,5,6])
+// v1()
