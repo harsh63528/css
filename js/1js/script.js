@@ -72,27 +72,27 @@
 
 // fibuonacci number
 
-function fibu(num){
-    return function(){
-        let init=0;
-        let curr=1;
-        let next;
-        const arr=[];
+// // function fibu(num){
+// //     return function(){
+// //         let init=0;
+// //         let curr=1;
+// //         let next;
+// //         const arr=[];
 
         
-            for(let i=0;i<= num;i++){
-                next=init+curr;
-                init=curr;
-                curr=next;
-                arr.push(next)
-            }
-            arr.reverse;
-            return arr
-    }
-}
+// //             for(let i=0;i<= num;i++){
+// //                 next=init+curr;
+// //                 init=curr;
+// //                 curr=next;
+// //                 arr.push(next)
+// //             }
+// //             arr.reverse;
+// //             return arr
+// //     }
+// // }
 
-let v1=fibu(10)
-console.log(v1())
+// let v1=fibu(10)
+// console.log(v1())
 
 // find missing value
 
@@ -119,3 +119,24 @@ console.log(v1())
 
 // let v1=missing([1,0,3,4,5,6])
 // v1()
+
+// ======================================ARRAY========================================================
+
+// q1 how to you check if a element in array is exist or not
+
+const arr=[1,2,3,4,5,9,4,6,654,8,321,545,52,123,165,]
+
+function check(num){
+    return function(){
+        let exist=false;
+    arr.forEach((element)=>{
+        if(element=== num){
+            exist=true
+        }
+       
+    })
+    return exist
+    }
+}
+
+console.log(check(55)())
