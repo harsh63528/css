@@ -124,19 +124,41 @@
 
 // q1 how to you check if a element in array is exist or not
 
-const arr=[1,2,3,4,5,9,4,6,654,8,321,545,52,123,165,]
+// const arr=[1,2,3,4,5,9,4,6,654,8,321,545,52,123,165,]
 
-function check(num){
-    return function(){
-        let exist=false;
-    arr.forEach((element)=>{
-        if(element=== num){
-            exist=true
-        }
+// function check(num){
+//     return function(){
+//         let exist=false;
+//     arr.forEach((element)=>{
+//         if(element=== num){
+//             exist=true
+//         }
        
-    })
-    return exist
+//     })
+//     return exist
+//     }
+// }
+
+// console.log(check(55)())
+
+// =============================== STRING ==============================================================
+
+// find word exist in string or not 
+
+function findString(str,i){
+    let type= typeof str
+    return function(){
+        if(type=== 'string'){
+            let value=str.includes(i)
+            return value
+
+        }
+        else{
+            console.log('i am not string')
+        }
+        
     }
 }
 
-console.log(check(55)())
+const v1=findString('harsh','h')
+console.log(v1())
