@@ -145,20 +145,20 @@
 
 // find word exist in string or not 
 
-function findString(str,i){
-    let type= typeof str
-    return function(){
-        if(type=== 'string'){
-            let value=str.includes(i)
-            return value
+// function findString(str,i){
+//     let type= typeof str
+//     return function(){
+//         if(type=== 'string'){
+//             let value=str.includes(i)
+//             return value
 
-        }
-        else{
-            console.log('i am not string')
-        }
+//         }
+//         else{
+//             console.log('i am not string')
+//         }
         
-    }
-}
+//     }
+// }
 
-const v1=findString('harsh','h')
-console.log(v1())
+// const v1=findString('harsh','h')
+// console.log(v1())
