@@ -162,3 +162,68 @@
 
 // const v1=findString('harsh','h')
 // console.log(v1())
+
+// =======================================searching algorithm ===========================================
+
+// linear search algorithm
+
+// q1 finding a number eixst in a array or not
+
+// function search(arr,num){
+//     let exist=false;
+//  return function (){
+//     let obj=[]
+//     arr.forEach((element,index) => {
+//         if(element===num){
+//         exist=true;
+//          obj.push({
+//             present: exist,
+//             place:index,
+//             value:element
+//         })
+        
+//         }
+
+        
+//     });
+//      if(obj.length >=1) return obj
+//      return exist;
+
+//  }
+// }
+
+// const v1=  search([1,2,6,8,7,6,9,,56,2,4,6,],6)
+// console.log(v1())
+
+
+// Binary search algorithm
+
+function binary(arr,value){
+    console.log(arr)
+    console.log(value)
+   return function (){
+    let mid= Math.floor((arr.length)/2)
+    console.log(mid)
+    for(let i=0;i<arr.length;i++){
+        if(value=arr[mid]){
+            console.log(mid)
+            console.log(`${value}=== ${mid}`)
+            return mid
+        }
+        else if(value<arr[mid]){
+             console.log(`${value}< ${mid}`)
+            let val=mid;
+            mid=val/2;
+        }
+        else if(value>arr[mid]){
+             console.log(`${value}> ${mid}`)
+            let val2=mid;
+            mid=val2*2
+        }
+    }
+    return -1
+   }
+}
+
+const k1=binary([1,2,3,4,5,6,7],10)
+console.log(k1())
