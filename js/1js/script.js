@@ -199,31 +199,51 @@
 // Binary search algorithm
 
 function binary(arr,value){
-    console.log(arr)
-    console.log(value)
+
+    // console array and value
+    arr.sort()
+    console.log(`array: ${arr}`)
+    console.log(`Value before loop : ${value}`)
+
+    // returning function
    return function (){
-    let mid= Math.floor((arr.length)/2)
-    console.log(mid)
-    for(let i=0;i<arr.length;i++){
-        if(value=arr[mid]){
-            console.log(mid)
-            console.log(`${value}=== ${mid}`)
-            return mid
-        }
-        else if(value<arr[mid]){
-             console.log(`${value}< ${mid}`)
-            let val=mid;
-            mid=val/2;
-        }
-        else if(value>arr[mid]){
-             console.log(`${value}> ${mid}`)
-            let val2=mid;
-            mid=val2*2
+
+    // finding middle index
+    let left=0;
+    let right=arr.length-1;
+    let mid= Math.floor((left+right)/2)
+    
+    // displaying middle index
+    console.log(`middle value before loop : ${mid}`)
+
+
+    
+        for (let i=0;i<arr.length;i++){
+            console.log(`i am runn`)
+            if(value===arr[mid]){
+                console.log(`i am running`)
+        return ({
+            value:value,
+            index:mid,
+            array_value:arr[mid]
+        })
+    }
+            else if(value>arr[mid]) {
+                console.log(`mid right:${mid}`)
+                mid=(mid+ arr.length)/2
+            }
+            else if(value<arr[mid]){
+                console.log(`mid left:${mid}`)
+                mid=Math.floor((0+mid)/2)
+            }
+            else{
+                return -1;
+            }
         }
     }
-    return -1
+    
    }
-}
 
-const k1=binary([1,2,3,4,5,6,7],10)
+
+const k1=binary([50,30,80,10,20,40],80)
 console.log(k1())
