@@ -198,52 +198,77 @@
 
 // Binary search algorithm
 
-function binary(arr,value){
+// function binary(arr,value){
 
-    // console array and value
-    arr.sort()
-    console.log(`array: ${arr}`)
-    console.log(`Value before loop : ${value}`)
+//     // console array and value
+//     arr.sort()
+//     console.log(`array: ${arr}`)
 
-    // returning function
-   return function (){
+//     console.log(`Value before loop : ${value}`)
 
-    // finding middle index
-    let left=0;
-    let right=arr.length-1;
-    let mid= Math.floor((left+right)/2)
+//     // returning function
+//    return function (){
+
+//     // finding middle index
+//     let left=0;
+//     let right=arr.length-1;
+//     let mid= Math.floor((left+right)/2)
     
-    // displaying middle index
-    console.log(`middle value before loop : ${mid}`)
+//     // displaying middle index
+//     console.log(`middle value before loop : ${mid}`)
 
 
     
-        for (let i=0;i<arr.length;i++){
-            console.log(`i am runn`)
-            if(value===arr[mid]){
-                console.log(`i am running`)
-        return ({
-            value:value,
-            index:mid,
-            array_value:arr[mid]
-        })
-    }
-            else if(value>arr[mid]) {
-                console.log(`mid right:${mid}`)
-                mid=(mid+ arr.length)/2
-            }
-            else if(value<arr[mid]){
-                console.log(`mid left:${mid}`)
-                mid=Math.floor((0+mid)/2)
-            }
-            else{
-                return -1;
+//         for (let i=0;i<arr.length;i++){
+//             console.log(`i am runn`)
+//             if(value===arr[mid]){
+//                 console.log(`i am running`)
+//         return ({
+//             value:value,
+//             index:mid,
+//             array_value:arr[mid]
+//         })
+//     }
+//             else if(value>arr[mid]) {
+//                 console.log(`mid right:${mid}`)
+//                 mid=(mid+ arr.length)/2
+//             }
+//             else if(value<arr[mid]){
+//                 console.log(`mid left:${mid}`)
+//                 mid=Math.floor((0+mid)/2)
+//             }
+//             else{
+//                 return -1;
+//             }
+//         }
+//     }
+    
+//    }
+
+
+// const k1=binary([50,30,80,10,20,40],80)
+// console.log(k1())
+
+//Bubble sort algorithm
+
+function bubblesort(arr){
+ 
+ return function (){
+    for(let i=0;i<arr.length;i++){
+        for(let j=0;j<arr.length;j++){
+            if(arr[j]>arr[j+1]){
+                let temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
             }
         }
     }
-    
-   }
 
+    return arr;
+ }
+}
 
-const k1=binary([50,30,80,10,20,40],80)
-console.log(k1())
+let arr=[5,15,11,15,16,6,8,7,9,10,12,13,14]
+console.log(`array before sort=${arr}`)
+let v1=bubblesort(arr)
+console.log(`array after sort=${v1()}`)
