@@ -30,5 +30,19 @@ function selection(arr){
     let select;
     return function(){
         
+        for(let i=0;i<arr.length;i++){
+            select=i
+           for(let j=0;j<arr.length;j++){
+            arr.forEach((element,index) => {
+                if(element>arr[i])  select=index
+            });
+           };
+           arr[i]=select
+        }
+        return arr
     }
 }
+
+const arr=[10,5,1,8,6,3,2,4,7,9]
+let k1=selection(arr)
+console.log(k1())
