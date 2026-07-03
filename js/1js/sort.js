@@ -32,28 +32,31 @@ function selection(arr){
 
 // step 3:create variable for storing selected element index in array
 let selectIndex;
+
 // step 4:create loop for checking if the all elements are looped
-for(let i=0;i < arr.length;i++){
-    selectIndex=i;
-    // step 5:create subloop for checking if the selected elemet is smaller than everyone present in loop or not
-    // step 6:if the selected element is not smaller than compare element then take that elemnt index else do nothing
-    // step 7:do setep 6 for all the element 
-    for (let j=i+1;j>arr.length;j++){
-        if(arr[j]>arr[selectIndex]){
-            console.log(`${arr[j]} is smaller than ${arr[selectIndex]}`)
-            selectIndex=j;
+for(let i = 0; i < arr.length; i++){
+    selectIndex = i;
+
+    // step 5:create subloop for checking if the selected element is smaller than everyone present in loop or not
+    // step 6:if the selected element is not smaller than compare element then take that element index else do nothing
+    // step 7:do step 6 for all the elements
+    for(let j = i + 1; j < arr.length; j++){
+        if(arr[j] < arr[selectIndex]){
+            console.log(`${arr[j]} is smaller than ${arr[selectIndex]}`);
+            selectIndex = j;
         }
     }
-if(selectIndex !== i){
-    let temp=arr[i];
-    arr[selectIndex]=arr[i];
-    arr[i]=temp
+
+    if(selectIndex !== i){
+        let temp = arr[i];
+        arr[i] = arr[selectIndex];
+        arr[selectIndex] = temp;
+    }
 }
 
-}
-return arr
-// step 8: exist subloop check if all the element arre check if checked then exist loop 
+// step 8: exit subloop check if all the elements are checked then exit loop
+return arr;
 
 }
 
-console.log(selection([6,3,5,3,2,4]))
+console.log(selection([10, 5, 3, 8, 6, 2, 4, 7, 9, 1]));
