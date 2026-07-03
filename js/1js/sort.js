@@ -26,23 +26,26 @@
 
 // selection sort 
 
-function selection(arr){
-    let select;
-    return function(){
-        
-        for(let i=0;i<arr.length;i++){
-            select=i
-           for(let j=0;j<arr.length;j++){
-            arr.forEach((element,index) => {
-                if(element>arr[i])  select=index
-            });
-           };
-           arr[i]=select
-        }
-        return arr
-    }
-}
+// step 1: start
+// step 2:create a function
+function selection(arr=[]){
 
-const arr=[10,5,1,8,6,3,2,4,7,9]
-let k1=selection(arr)
-console.log(k1())
+// step 3:create variable for storing selected element index in array
+let selectIndex;
+// step 4:create loop for checking if the all elements are looped
+for(let i=0;i < arr.length;i++){
+    selectIndex=i;
+    for (let j=i+1;j<arr.length;j++){
+        if(arr[j]<arr[selectIndex]){
+            console.log(`${arr[j] is smaller than ${arr[selectIndex]}`)
+            selectIndex=j;
+        }
+    }
+    arr[i]
+
+}
+// step 5:create subloop for checking if the selected elemet is smaller than everyone present in loop or not
+// step 6:if the selected element is not smaller than compare element then take that elemnt index else do nothing
+// step 7:do setep 6 for all the element 
+// step 8: exist subloop check if all the element arre check if checked then exist loop 
+}
