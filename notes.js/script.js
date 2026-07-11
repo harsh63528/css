@@ -5,6 +5,14 @@ const btn=document.getElementById('btn')
 // tasks 
 const tasks=[];
 
+
+btn.addEventListener('click',(e)=>{
+    console.dir(task.value)
+    let input=data(task.value)()
+    add(input);
+    injection(tasks)
+})
+
 // function for accessing the value
 function data(value){
     // creating variable for storing value
@@ -13,16 +21,18 @@ function data(value){
 
         // check wheteher the input task is empty or not if empty then it alert them
         // if it is not empty
-        if(value !== false){
+        if(value !== ""){
+            
 
         // storing the value in variable info [format:task,date,tag(task is completed or not),time]
         info={
             task:value,
-            date:date.getDate,
+            date:new Date().getDate(),
             tag:false
         }
+        console.log(info)
     
-        return info
+        return
     }
 
     // if it is empty
@@ -35,13 +45,19 @@ function data(value){
 
 // for adding the value in the tasks array   note:it is a prototype work needed
 function add(value){
+    console.log('from add'+ value)
     tasks.push(value)
 }
 
 // function for reloading the task or injecting html tag in the html
 function injection(arr){
+    console.log(arr)
     // looping array for each element
-    arr.array.forEach(element => {
-        let 
+    arr.forEach(element => {
+        console.log('from injection' + element)
+        let task=document.createElement('p')
+        task.classList.add('task');
+        task.textContent= `task :${element.task}  date: ${element.date} `
+        document.getElementById("tasks").appendChild(task)
     });
 }
